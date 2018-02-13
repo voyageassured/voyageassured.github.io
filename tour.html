@@ -71,6 +71,14 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function(){  
+		  $('#main-slider').liquidSlider({autoSlide: true, dynamicTabs: false,})   
+		})
+	  </script>
+
 	<script>
 $(function () {
 
@@ -128,319 +136,34 @@ $("#slider1").responsiveSlides({
 
 			<!-- end:header-top -->
 
-			<div class="fh5co-hero">
-				<div class="fh5co-overlay"></div>
-	 			<div class="fh5co-cover" data-stellar-background-ratio="0.9" style="background-image: url(images/fly.jpg);">
-					<div class="desc">
-						<div class="container">
-							<div class="row">
-								<div class="col-sm-5 col-md-5">
-									<div class="tabulation animate-box">
-										<!-- Nav tabs -->
-										<ul class="nav nav-tabs" role="tablist">
-											<li role="presentation" class="active">
-												<a href="#flights" aria-controls="flights" role="tab" data-toggle="tab">Student Visa Assessment</a>
-											</li>
-										</ul>
-										<!-- Tab panes -->
-										<div class="tab-content">
-											<div role="tabpanel" class="tab-pane active" id="flights">
-												<div class="row">
+<section class="liquid-slider" id="main-slider">
+  <div style="background-image: url(images/fly.jpg); background-repeat: no-repeat;  height: 500px; width: 100%">
+		<br/>
+		<br/>
+		<h2 style="text-align:center; color:white">Work, Study, and Live Abroad</h2>
+		<h3 style="text-align:center; color:white">We act as a student's guide, interpreter and facilitator for the entire university selection, application and visa process. Hence, we provide the students and their families' personalized and comprehensive assistance in their investment in intellectual, non tangible asset –Education.</h3>
 
-													<div class="col-xxs-12 col-xs-6 mt">
-														<div class="input-field">
-															<label for="from">Surname:</label>
-															<input type="text" class="form-control" id="surname" placeholder="" />
-														</div>
-													</div>
-
-													<div class="col-xxs-12 col-xs-6 mt">
-														<div class="input-field">
-															<label for="from">First Name:</label>
-															<input type="text" class="form-control" id="firstname" placeholder="" />
-														</div>
-													</div>
-
-													<div class="col-xxs-12 col-xs-6 mt">
-														<div class="input-field">
-															<label for="from">Middle Name:</label>
-															<input type="text" class="form-control" id="middlename" placeholder="" />
-														</div>
-													</div>
-
-													<div class="col-xxs-12 col-xs-6 mt">
-														<div class="input-field">
-															<label for="from">Place of Birth:</label>
-															<input type="text" class="form-control" id="firstname" placeholder="" />
-														</div>
-													</div>
-
-													<div class="col-xxs-12 col-xs-6 mt alternate">
-														<div class="input-field">
-															<label for="date-end">Date of Birth:</label>
-															<input type="text" class="form-control" id="date-end" placeholder="mm/dd/yyyy" />
-														</div>
-													</div>
-
-													<div class="col-xxs-12 col-xs-6 mt">
-														<div class="input-field">
-															<label for="from">Nationality:</label>
-															<input type="text" class="form-control" id="firstname" placeholder="" />
-														</div>
-													</div>
-
-													<div class="col-xxs-12 col-xs-6 mt">
-														<div class="input-field">
-															<label for="from">Father's Name:</label>
-															<input type="text" class="form-control" id="firstname" placeholder="" />
-														</div>
-													</div>
-
-								                             					<div class="col-xxs-12 col-xs-6 mt">
-														<div class="input-field">
-															<label for="from">Mother's Name:</label>
-															<input type="text" class="form-control" id="firstname" placeholder="" />
-														</div>
-													</div>
-
-													<div class="col-xxs-12 col-xs-6 mt">
-														<div class="input-field">
-															<label for="from">Occupation:</label>
-															<input type="text" class="form-control" id="firstname" placeholder="" />
-														</div>
-													</div>
-													<div class="col-xxs-12 col-xs-6 mt">
-														<div class="input-field">
-															<label for="from">Religion:</label>
-															<input type="text" class="form-control" id="firstname" placeholder="" />
-														</div>
-													</div>
-
-
-													<div class="col-xxs-12 col-xs-6 mt">
-														<div class="input-field">
-															<label for="from">Email:</label>
-															<input type="email" class="form-control" id="firstname" placeholder="" />
-														</div>
-													</div>
-
-													<div class="col-xxs-12 col-xs-6 mt">
-														<div class="input-field">
-															<label for="from">Phone No:</label>
-															<input type="phone" class="form-control" id="firstname" placeholder="" />
-														</div>
-													</div>
-
-													<div class="col-xxs-12 col-xs-6 mt">
-														<div class="input-field">
-															<label for="from">Next Of Kin:</label>
-															<input type="phone" class="form-control" id="firstname" placeholder="full name" />
-														</div>
-													</div>
-
-													<div class="col-xxs-12 col-xs-6 mt">
-														<div class="input-field">
-															<label for="from">Next of Kin Phone No:</label>
-															<input type="phone" class="form-control" id="firstname" placeholder="xxx-xxx-xxxx" />
-														</div>
-													</div>
-
-
-
-
-													<div class="col-sm-12 mt">
-														<section>
-															<label for="class">Sex:</label>
-															<select class="cs-select cs-skin-border">
-																<option value="" disabled selected>Male</option>
-																<option value="male">Male</option>
-																<option value="female">Female</option>
-															</select>
-														</section>
-													</div>
-
-													<div class="col-sm-12 mt">
-															<section>
-																<label for="class">Destination Country: </label>
-																<select class="cs-select cs-skin-border">
-																	<option value="" disabled selected>Canada</option>
-																	<option value="Canada">Canada</option>
-																	<option value="Australia">Australia</option>
-																	<option value="UK">UK</option>
-																	<option value="USA">USA</option>
-																</select>
-															</section>
-														</div>
-
-													<div class="col-xs-12">
-														<input type="submit" class="btn btn-primary btn-block" value="Start Today">
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!--#################################################start#############################################################-->
-
-								<div class="desc2 animate-box">
-									<div class="col-sm-7">
-										<h2>Work, Study, and Live Abroad</h2>
-										<h3>We act as a student's guide, interpreter and facilitator for the entire university selection, application and visa process. Hence, we provide the students and their families' personalized and comprehensive assistance in their investment in intellectual, non tangible asset –Education.</h3>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-
-
-
-			<div id="fh5co-features">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-4 animate-box">
-
-							<div class="feature-left">
-								<span class="icon">
-									<i class="icon-hotairballoon"></i>
-								</span>
-								<div class="feature-copy">
-									<h3>Visa Application Guidance</h3>
-									<p>Voyage Assured provides the guidance in preparing your visa application and necessary documentation enabling you to put in conclusive proof in terms of establishing your academic genuineness, financial stability and roots back to Nigeria. We have an unbeatable success rate of over 95% in securing student visas to even the toughest places in the world like USA due to our systematic guidance and professional approach.
-									We ensure that the visa applications get processed faster and you get the visa without needless delays. Being a Nigerian Specialist Agency, we obtain a decision for a Visa within 15-20 working days. We have an amazing 98% success rate for visa approval</p>
-								</div>
-							</div>
-
-						</div>
-
-						<div class="col-md-4 animate-box">
-							<div class="feature-left">
-								<span class="icon">
-									<i class="icon-search"></i>
-								</span>
-								<div class="feature-copy">
-									<h3>Application Processing Assitance</h3>
-									<p>Application Processing Assistance in preparing the application file and required documents such as transcripts, letter of recommendations, essays (Statement of Purpose) etc. is given on the basis of a successful strategy to maximise the chance of admissions. Follow-up and Securing Admission We do the necessary follow-up and secure admissions in the shortest possible time. ‎Voyage Assured success rate in admissions is 100%.
-									We give special attention to your application and also help with the most important “Statement of Purpose”. Our staff follows up with the chosen University and ensures a positive and quick response. We deliver what we promise!</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 animate-box">
-							<div class="feature-left">
-								<span class="icon">
-									<i class="icon-wallet"></i>
-								</span>
-								<div class="feature-copy">
-									<h3>Financial Advisory</h3>
-									<p>
-									At Voyage Assured, we know the importance of education, more-so, we know the importance of good education. However, good education usually comes at a ‘good’ price. That is why we take it upon ourselves to provide the best alternatives money can buy. In lieu of this, we offer our candidates many destinations around the world where they can obtain a good education.‎
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-4 animate-box">
-
-							<div class="feature-left">
-								<span class="icon">
-									<i class="icon-wine"></i>
-								</span>
-								<div class="feature-copy">
-									<h3>Travel and Accomodation Arrangement</h3>
-									<p>
-									 Voyage Assured helps with the arrangement of flight ticket, dorm or home-stay accommodation for the student, travel insurance and hotel bookings for the guidian and other family members who might be accompanying the student.
-									</p>
+</div>
+				
+  <div style="background-image: url(images/fly.jpg); background-repeat: no-repeat; height: 500px; width: 100%">
+	<br/>
+	<br/>
+	
 									
-								</div>
-							</div>
+	<h2 style="text-align:center; color:white">Visa Application Guidance</h2>
+	<h3 style="text-align:center; color:white">Voyage Assured provides the guidance in preparing your visa application and necessary documentation enabling you to put in conclusive proof in terms of establishing your academic genuineness, financial stability and roots back to Nigeria.</h3>
+  </div>
 
-						</div>
+  <div style="background-image: url(images/fly.jpg); background-repeat: no-repeat; height: 500px; width: 100%">
+	<br/>
+	<br/>
+	<h2 style="text-align:center; color:white">Travel and Accomodation Arrangement</h2>
+	<h3 style="text-align:center; color:white">Voyage Assured helps with the arrangement of flight ticket, dorm or home-stay accommodation for the student, travel insurance and hotel bookings for the guidian and other family members who might be accompanying the student.</h3>
+  </div>
 
-						<div class="col-md-4 animate-box">
-							<div class="feature-left">
-								<span class="icon">
-									<i class="icon-genius"></i>
-								</span>
-								<div class="feature-copy">
-									<h3>Admission Requirement</h3>
-									<p>
-										<ul>
-												<li>Academic Transcripts Statement of Results</li>
-												<li>Five (5) Passport-size photos</li>
-												<li>International passport In addition, some Universities demand that candidates must have taken and passed some of these international exams GMAT, SAT, TSE, IELTS and TOEFL.</li>
-										</ul>
-									</p>
-								</div>
-							</div>
+</section>
 
-						</div>
-						<div class="col-md-4 animate-box">
-							<div class="feature-left">
-								<span class="icon">
-									<i class="icon-chat"></i>
-								</span>
-								<div class="feature-copy">
-									<h3>Very Responsive Customer Service</h3>
-									<p>We take your plans seriously, and that is why we have a 24/7 on-demand customer service to cater to your needs.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Patner Section -->
-			<div id="fh5co-features">
-				<div class="container">
-						<div class="row animate-box">
-								<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-									<h2>Our Patners
-									</h2>
-								</div>
-							</div>
-					<div class="row">
-						<div class="col-md-4 animate-box">
-							<img src="images/seneca-logo.svg" alt="seneca logo" width="250px" height="180px">
-							<h1> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; College</h1>            
-						</div>
 
-						<div class="col-md-4 animate-box">
-								<br/>
-							<br/ >
-								<img src="images/winnipeg.png" alt="Winnipeg logo" width="400px" height="150px">
-								
-						</div>
-						<div class="col-md-4 animate-box">
-								<br/>
-								<br/ >
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/regina.png" alt="Winnipeg logo" width="300px" height="150px">
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-4 animate-box">
-
-							<div class="feature-left">
-									&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/melbourne.png" alt="Winnipeg logo" width="200px" height="250px">
-							</div>
-
-						</div>
-
-						<div class="col-md-4 animate-box">
-							<div class="feature-left">
-								<img src="images/uni.jpg" alt="university of sydney" width="350px" height="250px">
-							</div>
-
-						</div>
-						<div class="col-md-4 animate-box">
-							<div class="feature-left">
-									&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/sydney.png" alt="Winnipeg logo" width="300px" height="150px">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 
 
 			<!-- fh5co-blog-section -->
@@ -637,7 +360,9 @@ $("#slider1").responsiveSlides({
 
 	<!-- Main JS -->
 	<script src="js/main.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
+    <script src="js/jquery.liquid-slider.min.js"></script>
 </body>
 
 </html>
