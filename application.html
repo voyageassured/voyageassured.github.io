@@ -108,10 +108,8 @@ $("#application").click(function(){
 	console.log(data)
 	$.ajax('https://api.mailgun.net/v3/YOUR_SANDBOX.mailgun.org/messages',
 	{	
-		headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-    	},
-		method: "POST",
+		
+		type: "POST",
 		crossDomain : true,
 		dataType: "jsonp",
 		username: 'api',
