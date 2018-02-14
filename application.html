@@ -105,7 +105,7 @@ $("#application").click(function(){
 	var country = $("#country").val()
 	data = "Surname: "+surname+"<br/>"+"First Name: "+firstName+"<br/>"+"Middle Name: "+middleName+"<br/>"+"Place Of birth: "+placeOfBirth+"<br>"+
 	"Date of birth: "+dateOfBirth+"<br/>"+" Nationality: "+nationality+"<br/>"+"Father Name: "+fatherName+"<br/>"+"Mother Name: "+motherName+"<br/>"+"Occupation: "+occupation+"<br/>"+
-
+	console.log()
 	$.ajax('https://api.mailgun.net/v3/YOUR_SANDBOX.mailgun.org/messages',
 	{
 		type:"POST",
