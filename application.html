@@ -72,17 +72,58 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 	<script>
-$(function () {
-
-// Slideshow 1
-$("#slider1").responsiveSlides({
-  maxwidth: 800,
-  speed: 800
-});
+$(document).ready(function(){
+	
 
 
 
-});
+$("#application").click(function(){
+	var data = ""
+	var surname = $("#surname").val()
+	var firstName = $("#firstName").val()
+	var middleName = $("#middleName").val()
+	var placeOfBirth = $("#placeOfBirth").val()
+	var dateOfBirth = $("#dateOfBirth").val()
+	var nationality = $("#nationality").val()
+	var fatherName = $("#fatherName").val()
+	var motherName = $("#motherName").val()
+	var occupation = $("#occupation").val()
+	var religion = $("#religion").val()
+	var email = $("#email").val()
+	var phoneNumber = $("#phoneNumber").val()
+	var nextOfKinName = $("#nextOfKinName").val()
+	var nextOfKinNo = $("#nextOfKinNo").val()
+	var city = $("#locationCanada").val()
+	var primaryAttended = $("#primaryAttended").val()
+	var secondaryAttended = $("#secondaryAttended").val()
+	var polytechnicAttended = $("#polytechnicAttended").val()
+	var sex = $("#sex").val()
+	var relative = $("#relative").val()
+	var health = $("#health").val()
+	var crime = $("#crime").val()
+	var extend = $("#extendStay").val()
+	var country = $("#country").val()
+	data = "Surname: "+surname+"<br/>"+"First Name: "+firstName+"<br/>"+"Middle Name: "+middleName+"<br/>"+"Place Of birth: "+placeOfBirth+"<br>"+
+	"Date of birth: "+dateOfBirth+"<br/>"+" Nationality: "+nationality+"<br/>"+"Father Name: "+fatherName+"<br/>"+"Mother Name: "+motherName+"<br/>"+"Occupation: "+occupation+"<br/>"+
+	
+	$.ajax('https://api.mailgun.net/v3/YOUR_SANDBOX.mailgun.org/messages',
+	{
+		type:"POST",
+		username: 'pubkey-ea18f67f98074fa7956815b48cc56f7a',
+		password: 'key-df313daf2b91b4fcaf448e0bc69c76cd',
+		data:{
+			"html": data,
+			"subject": "New Client",
+			"from": "Voyage Assured<voyageassured@gmail.com>",
+			"to": "Voyage Assured<voyageassured@gmail.com>"
+		},
+		success:function(a,b,c){
+			console.log( 'mail sent: ', b );
+		}.bind(this),
+		error:function( xhr, status, errText ){console.log( 'mail sent failed: ', xhr.responseText );}
+	})
+})
+})
 	</script>
 
 </head>
@@ -282,7 +323,7 @@ $("#slider1").responsiveSlides({
 													<div class="col-sm-12 mt">
 														<section>
 															<label for="class">Sex:</label>
-															<select class="cs-select cs-skin-border">
+															<select class="cs-select cs-skin-border" id="sex">
 																<option value="male" disabled selected>Male</option>
 																<option value="male">Male</option>
 																<option value="female">Female</option>
@@ -293,7 +334,7 @@ $("#slider1").responsiveSlides({
 													<div class="col-sm-12 mt">
 														<section>
 															<label for="class">Do you have relative in Canada?</label>
-															<select class="cs-select cs-skin-border">
+															<select class="cs-select cs-skin-border" id="relative">
 																<option value="no" disabled selected>no</option>
 																<option value="yes">yes</option>
 																<option value="no">no</option>
@@ -304,7 +345,7 @@ $("#slider1").responsiveSlides({
 													<div class="col-sm-12 mt">
 														<section>
 															<label for="class">Have you commited any crime in your home country?</label>
-															<select class="cs-select cs-skin-border">
+															<select class="cs-select cs-skin-border" id="crime">
 																<option value="no" disabled selected>no</option>
 																<option value="yes">yes <option>
 																<option value="no">no </option>
@@ -315,7 +356,7 @@ $("#slider1").responsiveSlides({
 													<div class="col-sm-12 mt">
 														<section>
 															<label for="class">Do you have good health status?</label>
-															<select class="cs-select cs-skin-border">
+															<select class="cs-select cs-skin-border" id="health">
 																<option value="yes" disabled selected>yes</option>
 																<option value="yes">yes</option>
 																<option value="no">no</option>
@@ -326,7 +367,7 @@ $("#slider1").responsiveSlides({
 													<div class="col-sm-12 mt">
 														<section>
 															<label for="class">Do you wish to extend your stay after four years?</label>
-															<select class="cs-select cs-skin-border">
+															<select class="cs-select cs-skin-border" id="extendStay">
 																<option value="yes" disabled selected>yes</option>
 																<option value="yes">yes</option>
 																<option value="no">no</option>
@@ -337,7 +378,7 @@ $("#slider1").responsiveSlides({
 													<div class="col-sm-12 mt">
 															<section>
 																<label for="class">Destination Country: </label>
-																<select class="cs-select cs-skin-border">
+																<select class="cs-select cs-skin-border" id="country">
 																	<option value="" disabled selected>Canada</option>
 																	<option value="Canada">Canada</option>
 																	<option value="Australia">Australia</option>
@@ -348,7 +389,7 @@ $("#slider1").responsiveSlides({
 														</div>
 
 													<div class="col-xs-12">
-														<input type="submit" class="btn btn-primary btn-block" value="Submit">
+														<input type="submit" id="application" class="btn btn-primary btn-block" value="Submit">
 													</div>
 												</div>
 											</div>
