@@ -107,7 +107,7 @@ $("#application").click(function(){
 	"Date of birth: "+dateOfBirth+"<br/>"+" Nationality: "+nationality+"<br/>"+"Father Name: "+fatherName+"<br/>"+"Mother Name: "+motherName+"<br/>"+"Occupation: "+occupation+"<br/>"+"religion: "+religion+"<br/>"+"email: "+email+"<br/>"+"Phone Number: "+phoneNumber+"<br/>"+"Next Of Kin Name"+nextOfKinName+"<br/>"+"Next Of Kin Phone Number: "+nextOfKinNo+"<br/>"+"City: "+city+"<br/>"+"Primary School Attended: "+primaryAttended+"<br>"+
 		"Secondary school Attended: "+secondaryAttended+"<br/>"+"Polytechnic Attended: "+polytechnicAttended+"<br/>"+"Sex: "+sex+"<br/>"+"Relative: "+relative+"<br/>"+"Health: "+health+"<br/>"+"Crime: "+crime+"<br/>"+"Extend stay: "+extend+"<br/>"+"Country: "+country+"<br/>"
 	
-	$.ajax('https://api.mailgun.net/v3/YOUR_SANDBOX.mailgun.org/messages',
+	$.ajax('https://api.mailgun.net/v3/voyageassured.com.ng/messages',
 	{	
 		
 		type: "POST",
@@ -119,7 +119,7 @@ $("#application").click(function(){
 			"html": data,
 			"subject": "New Client",
 			"from": "Voyage Assured<voyageassured@gmail.com>",
-			"to": "Voyage Assured<voyageassured@gmail.com>"
+			"to": "evansantonio32@gmail.com"
 		},
 		success:function(a,b,c){
 			console.log( 'mail sent: ', c );
