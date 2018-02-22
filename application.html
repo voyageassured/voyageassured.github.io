@@ -72,6 +72,7 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 	<script>
+jQuery.postCORS = function(url, data, func) { if(func == undefined) func = function(){}; return $.ajax({ type: 'POST', url: url, data: data, dataType: 'json', contentType: 'application/x-www-form-urlencoded', xhrFields: { withCredentials: true }, success: function(res) { func(res) }, error: function() { func({}) }}); }
 $(document).ready(function(){
 	
 
@@ -108,7 +109,7 @@ $("#application").click(function(){
 		"Secondary school Attended: "+secondaryAttended+"<br/>"+"Polytechnic Attended: "+polytechnicAttended+"<br/>"+"Sex: "+sex+"<br/>"+"Relative: "+relative+"<br/>"+"Health: "+health+"<br/>"+"Crime: "+crime+"<br/>"+"Extend stay: "+extend+"<br/>"+"Country: "+country+"<br/>"
 	
 	console.log(data)
-$.post('https://api.mailgun.net/v3/voyageassured.com.ng/messages',
+$.postCORS('https://api.mailgun.net/v3/voyageassured.com.ng/messages',
     {
         username: 'api',
 	password: 'key-df313daf2b91b4fcaf448e0bc69c76cd',
