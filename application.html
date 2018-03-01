@@ -110,14 +110,15 @@ $("#application").click(function(){
 	
 	console.log(clientData)
 $.ajax({
-	type: 'POST', url: 'https://api.mailgun.net/v3/voyageassured.com.ng/messages', username: 'api', password: 'key-df313daf2b91b4fcaf448e0bc69c76cd', data: {
+	type: 'POST', url: 'https://api.mailgun.net/v3/voyageassured.com.ng/messages', data: {
 	 
-	data:{
+		"username": 'api', 
+		"password": 'key-df313daf2b91b4fcaf448e0bc69c76cd',
 		"html": clientData,
 		"subject": "New Client",
 		"from": "Voyage Assured<voyageassured@gmail.com>",
 		"to": "evansantonio32@gmail.com"
-	}}, dataType: 'json', contentType: 'application/x-www-form-urlencoded', xhrFields: { withCredentials: true }
+	}, dataType: 'json', contentType: 'application/x-www-form-urlencoded'
         
     },
     function(data, status){
