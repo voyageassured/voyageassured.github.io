@@ -110,8 +110,8 @@ $("#application").click(function(){
 	
 	console.log(clientData)
 $.ajax({
-	type: 'POST', url: 'https://api.mailgun.net/v3/voyageassured.com.ng/messages', username: 'api', data: {username: 'api',
-	 password: 'key-df313daf2b91b4fcaf448e0bc69c76cd',
+	type: 'POST', url: 'https://api.mailgun.net/v3/voyageassured.com.ng/messages', username: 'api', password: 'key-df313daf2b91b4fcaf448e0bc69c76cd', data: {
+	 
 	data:{
 		"html": clientData,
 		"subject": "New Client",
