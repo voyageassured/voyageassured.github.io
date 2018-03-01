@@ -79,7 +79,7 @@ $(document).ready(function(){
 
 
 $("#application").click(function(){
-	var data = ""
+	var clientData = ""
 	var surname = $("#surname").val()
 	var firstName = $("#firstName").val()
 	var middleName = $("#middleName").val()
@@ -108,17 +108,17 @@ $("#application").click(function(){
 	"Date of birth: "+dateOfBirth+"<br/>"+" Nationality: "+nationality+"<br/>"+"Father Name: "+fatherName+"<br/>"+"Mother Name: "+motherName+"<br/>"+"Occupation: "+occupation+"<br/>"+"religion: "+religion+"<br/>"+"email: "+email+"<br/>"+"Phone Number: "+phoneNumber+"<br/>"+"Next Of Kin Name"+nextOfKinName+"<br/>"+"Next Of Kin Phone Number: "+nextOfKinNo+"<br/>"+"City: "+city+"<br/>"+"Primary School Attended: "+primaryAttended+"<br>"+
 		"Secondary school Attended: "+secondaryAttended+"<br/>"+"Polytechnic Attended: "+polytechnicAttended+"<br/>"+"Sex: "+sex+"<br/>"+"Relative: "+relative+"<br/>"+"Health: "+health+"<br/>"+"Crime: "+crime+"<br/>"+"Extend stay: "+extend+"<br/>"+"Country: "+country+"<br/>"
 	
-	console.log(data)
-$.postCORS('https://api.mailgun.net/v3/voyageassured.com.ng/messages',
-    {
-        username: 'api',
+	console.log(clientData)
+$.ajax({
+	type: 'POST', url: 'https://api.mailgun.net/v3/voyageassured.com.ng/messages', data: {username: 'api',
 	password: 'key-df313daf2b91b4fcaf448e0bc69c76cd',
 	data:{
-		"html": data,
+		"html": clientData,
 		"subject": "New Client",
 		"from": "Voyage Assured<voyageassured@gmail.com>",
-		"to": "evansantonio32@gmail.com"
-	}
+		"to": "voyageassured@gmail.com"
+	}}, dataType: 'json', contentType: 'application/x-www-form-urlencoded', xhrFields: { withCredentials: true }
+        
     },
     function(data, status){
         alert("Data: " + data + "\nStatus: " + status);
